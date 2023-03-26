@@ -1,0 +1,56 @@
+current directory: /home/keith/development/code/phase-4/labs/phase-4-rails-putting-it-all-together-auth/vendor/bundle/ruby/3.0.0/gems/puma-5.3.2/ext/puma_http11
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20230326-13714-kpsthw.rb extconf.rb
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... yes
+checking for DTLS_method() in openssl/ssl.h... yes
+checking for TLS_server_method() in openssl/ssl.h... yes
+checking for SSL_CTX_set_min_proto_version(NULL, 0) in openssl/ssl.h... yes
+checking for X509_STORE_up_ref()... yes
+checking for SSL_CTX_set_ecdh_auto(NULL, 0) in openssl/ssl.h... yes
+creating Makefile
+
+current directory: /home/keith/development/code/phase-4/labs/phase-4-rails-putting-it-all-together-auth/vendor/bundle/ruby/3.0.0/gems/puma-5.3.2/ext/puma_http11
+make DESTDIR\= clean
+
+current directory: /home/keith/development/code/phase-4/labs/phase-4-rails-putting-it-all-together-auth/vendor/bundle/ruby/3.0.0/gems/puma-5.3.2/ext/puma_http11
+make DESTDIR\=
+compiling http11_parser.c
+compiling mini_ssl.c
+mini_ssl.c: In function ‘get_dh2048’:
+mini_ssl.c:98:3: warning: ‘DH_new’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+   98 |   dh = DH_new();
+      |   ^~
+In file included from /usr/include/openssl/dsa.h:51,
+                 from /usr/include/openssl/x509.h:37,
+                 from /usr/include/openssl/ssl.h:31,
+                 from mini_ssl.c:10:
+/usr/include/openssl/dh.h:199:27: note: declared here
+  199 | OSSL_DEPRECATEDIN_3_0 DH *DH_new(void);
+      |                           ^~~~~~
+mini_ssl.c:112:3: warning: ‘DH_set0_pqg’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  112 |   if (p == NULL || g == NULL || !DH_set0_pqg(dh, p, NULL, g)) {
+      |   ^~
+In file included from /usr/include/openssl/dsa.h:51,
+                 from /usr/include/openssl/x509.h:37,
+                 from /usr/include/openssl/ssl.h:31,
+                 from mini_ssl.c:10:
+/usr/include/openssl/dh.h:255:27: note: declared here
+  255 | OSSL_DEPRECATEDIN_3_0 int DH_set0_pqg(DH *dh, BIGNUM *p, BIGNUM *q, BIGNUM *g);
+      |                           ^~~~~~~~~~~
+mini_ssl.c:113:5: warning: ‘DH_free’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  113 |     DH_free(dh);
+      |     ^~~~~~~
+In file included from /usr/include/openssl/dsa.h:51,
+                 from /usr/include/openssl/x509.h:37,
+                 from /usr/include/openssl/ssl.h:31,
+                 from mini_ssl.c:10:
+/usr/include/openssl/dh.h:200:28: note: declared here
+  200 | OSSL_DEPRECATEDIN_3_0 void DH_free(DH *dh);
+      |                            ^~~~~~~
+compiling puma_http11.c
+linking shared-object puma/puma_http11.so
+
+current directory: /home/keith/development/code/phase-4/labs/phase-4-rails-putting-it-all-together-auth/vendor/bundle/ruby/3.0.0/gems/puma-5.3.2/ext/puma_http11
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20230326-13714-i3m8o7/puma
